@@ -1,6 +1,6 @@
 $publishModuleSplat = @{
     Path        = ".\Show-Progress"
-    NuGetApiKey = $ENV:psgallaryapikey
+    NuGetApiKey = [System.Environment]::GetEnvironmentVariable("psgallaryapikey", "Machine")
     Verbose     = $true
     Force       = $true
     Repository  = "PSGallery"
@@ -8,8 +8,8 @@ $publishModuleSplat = @{
 }
 
 "Files in module output:"
-Get-ChildItem $Destination -Recurse -File | Select-Object -Expand FullName
+Get-ChildItem $publishModuleSplat.Path -Recurse -File | Select-Object -Expand FullName
 
-"Publishing [$Destination] to [$PSRepository]"
+"Publishing [$($publishModuleSplat.Path)] to [$($publishModuleSplat.Repository)]"
 
 Publish-Module @publishModuleSplat
