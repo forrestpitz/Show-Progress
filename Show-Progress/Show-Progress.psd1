@@ -100,7 +100,7 @@
             Tags       = @('Windows', 'Linux', 'MacOS', 'PSEdition_Desktop', 'PSEdition_Core')
 
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/forrestpitz/blob/master/Show-Progress/LICENSE'
+            LicenseUri = 'https://github.com/forrestpitz/Show-Progress/blob/master/Show-Progress/LICENSE'
 
             # A URL to the main website for this project.
             ProjectUri = 'https://github.com/forrestpitz/Show-Progress'
